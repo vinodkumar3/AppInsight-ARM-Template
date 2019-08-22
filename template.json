@@ -14,10 +14,6 @@
             "type": "string",
             "defaultValue": "westus2"
         },
-        "tagsArray": {
-            "type": "object",
-            "defaultValue": "{}"
-        },
         "requestSource": {
             "type": "string",
             "defaultValue": "IbizaAIExtension"
@@ -28,7 +24,6 @@
             "name": "[parameters('name')]",
             "type": "microsoft.insights/components",
             "location": "[parameters('regionId')]",
-            "tags": "[parameters('tagsArray')]",
             "apiVersion": "2014-08-01",
             "properties": {
                 "ApplicationId": "[parameters('name')]",
