@@ -3,19 +3,24 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "name": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "kuvtestappin"
         },
         "type": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "web"
         },
         "regionId": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "westus2"
         },
         "tagsArray": {
-            "type": "object"
+            "type": "object",
+            "defaultValue": "{}"
         },
         "requestSource": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "IbizaAIExtension"
         }
     },
     "resources": [
