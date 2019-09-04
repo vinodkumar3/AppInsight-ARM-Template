@@ -10,7 +10,7 @@ pool:
   name: Default
 
 steps:
-- task: AzureResourceGroupDeployment@3
+- task: AzureResourceDeployment@2
   displayName: 'Azure Deployment:Create Or Update Resource Group action on kuvrg'
   inputs:
     azureSubscription: rmd
