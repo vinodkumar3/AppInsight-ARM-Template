@@ -10,12 +10,8 @@ pool:
   name: Default
 
 steps:
-- task: AzureResourceDeployment@2
-  displayName: 'Azure Deployment:Create Or Update Resource Group action on kuvrg'
+- task: AzureKeyVaultt@1
+  displayName: 'Azure Key Vault: kuvsf18a4d'
   inputs:
     azureSubscription: rmd
-    subscriptionName: 'c00d16c7-6c1f-4c03-9be1-6934a4c49682'
-    resourceGroupName: kuvrg1
-    location: 'East Asia'
-    templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/vinodkumar3/AppInsight-ARM-Template/master/template.json'
+    KeyVaultName: kuvsf18a4d
