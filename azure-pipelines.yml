@@ -10,8 +10,11 @@ pool:
   name: Default
 
 steps:
-- task: AzureKeyVaultt@1
-  displayName: 'Azure Key Vault: kuvsf18a4d'
+- task: AzureResourceManagerTemplateDeployment@3
   inputs:
-    azureSubscription: rmd
-    KeyVaultName: kuvsf18a4d
+    deploymentScope: 'Subscription'
+    ConnectedServiceName: 'RMDev (c00d16c7-6c1f-4c03-9be1-6934a4c49682)'
+    location: 'East Asia'
+    templateLocation: 'Linked artifact'
+    csmFile: 'subscription.json'
+    deploymentMode: 'Incremental'
