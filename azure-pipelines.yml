@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  name: Default
+  name: Azure Pipelines
 steps:
 - task: AzureResourceManagerTemplateDeployment@3
   displayName: 'ARM Template deployment: Resource Group scope'
