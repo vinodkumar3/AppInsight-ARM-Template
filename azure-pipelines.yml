@@ -8,13 +8,11 @@ trigger:
 
 pool:
   name: Azure Pipelines
-
 steps:
 - task: AzureResourceManagerTemplateDeployment@3
+  displayName: 'ARM Template deployment: Resource Group scope'
   inputs:
-    deploymentScope: 'Subscription'
     ConnectedServiceName: 'RMDev (c00d16c7-6c1f-4c03-9be1-6934a4c49682)'
-    location: 'East Asia'
-    templateLocation: 'Linked artifact'
-    csmFile: 'subscription.json'
-    deploymentMode: 'Incremental'
+    resourceGroupName: kuvrg
+    location: 'Central India'
+    csmFile: subscription.json
