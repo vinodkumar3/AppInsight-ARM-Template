@@ -9,23 +9,14 @@ pool:
 
 steps:
 - task: AzureResourceManagerTemplateDeployment@3
-  displayName: 'ARM Template deployment: Resource Group scope'
-  inputs:
-    ConnectedServiceName: Rmd
-    subscriptionName: 'c00d16c7-6c1f-4c03-9be1-6934a4c49682'
-    resourceGroupName: kuvrg1df
-    location: 'East US'
-    csmFile: 'test/resource-group-template.json'
-
-- task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
     ConnectedServiceName: 'Rmd'
     action: 'Create Or Update Resource Group'
     subscriptionName: 'c00d16c7-6c1f-4c03-9be1-6934a4c49682'
-    resourceGroupName: 'kuvrg1'
-    location: 'East US'
-    templateLocation: 'Linked artifact'
-    csmFile: 'resource-group-template.json'
+    resourceGroupName: 'kurg'
+    location: 'Canada Central'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/vinodkumar3/AppInsight-ARM-Template/master/template.json'
     deploymentMode: 'Incremental'
-    deploymentName: 'aaaaaaaaaaaaaa'
+    deploymentName: 'aaaaaaaaaaa'
