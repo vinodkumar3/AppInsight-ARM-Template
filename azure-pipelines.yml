@@ -8,13 +8,16 @@ pool:
   name: Default
 
 steps:
-- task: AzureResourceManagerTemplateDeployment@3
-  displayName: 'Azure Deployment:Create Or Update Resource Group action on kuvrg'
-  inputs:
-    connectedServiceName: rmd
-    subscriptionName: 'c00d16c7-6c1f-4c03-9be1-6934a4c49682'
-    resourceGroupName: kuvrg1
-    location: 'East Asia'
-    templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/vinodkumar3/AppInsight-ARM-Template/master/template.json'
 
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    ConnectedServiceName: 'Rmd'
+    action: 'Create Or Update Resource Group'
+    subscriptionName: 'c00d16c7-6c1f-4c03-9be1-6934a4c49682'
+    resourceGroupName: 'kuvrg1'
+    location: 'East US'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'resource-group-template.json'
+    deploymentMode: 'Incremental'
+    deploymentName: 'aaaaaaaaaaaaaa'
