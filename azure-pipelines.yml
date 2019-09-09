@@ -17,6 +17,7 @@ steps:
     subscriptionName: 'c00d16c7-6c1f-4c03-9be1-6934a4c49682'
     resourceGroupName: 'kuvrg1'
     location: 'East US'
+    templateLocation: 'Linked artifact'
     csmFile: 'resource-group-template.json'
     deploymentMode: 'Incremental'
     deploymentName: 'aaaaaaaaaaaaaa'
