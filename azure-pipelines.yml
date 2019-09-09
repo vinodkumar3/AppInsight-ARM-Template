@@ -15,7 +15,7 @@ steps:
     subscriptionName: 'c00d16c7-6c1f-4c03-9be1-6934a4c49682'
     resourceGroupName: kuvrg1df
     location: 'East US'
-    csmFile: 'resource-group-template.json'
+    csmFile: 'test/resource-group-template.json'
 
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
