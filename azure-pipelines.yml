@@ -8,17 +8,14 @@ pool:
   name: Default
 
 steps:
+
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
-    deploymentScope: 'Resource Group'
+    deploymentScope: 'Subscription'
     ConnectedServiceName: 'Rmd'
-    action: 'Create Or Update Resource Group'
     subscriptionName: 'c00d16c7-6c1f-4c03-9be1-6934a4c49682'
-    resourceGroupName: 'kurg'
-    location: 'Canada Central'
+    location: 'Central India'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/vinodkumar3/AppInsight-ARM-Template/master/template.json'
+    csmFileLink: 'https://raw.githubusercontent.com/vinodkumar3/rgCreate/master/rgCreateTemplate'
     deploymentMode: 'Incremental'
-    deploymentName: 'aaaaaaaaaaa'
-
-    
+    deploymentName: 'bbbbbbb'
