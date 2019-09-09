@@ -18,6 +18,6 @@ steps:
     resourceGroupName: 'kuvrg1'
     location: 'East US'
     templateLocation: 'URL of the file'
-    csmFileLink: 'resource-group-template.json'
+    csmFile: 'resource-group-template.json'
     deploymentMode: 'Incremental'
     deploymentName: 'aaaaaaaaaaaaaa'
