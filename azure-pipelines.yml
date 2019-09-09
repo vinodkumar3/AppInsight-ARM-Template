@@ -20,3 +20,5 @@ steps:
     csmFileLink: 'https://raw.githubusercontent.com/vinodkumar3/AppInsight-ARM-Template/master/template.json'
     deploymentMode: 'Incremental'
     deploymentName: 'aaaaaaaaaaa'
+
+    
