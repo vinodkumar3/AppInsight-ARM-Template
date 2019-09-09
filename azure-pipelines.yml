@@ -17,3 +17,4 @@ steps:
     location: 'East Asia'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/vinodkumar3/AppInsight-ARM-Template/master/template.json'
+
