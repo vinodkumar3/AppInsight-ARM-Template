@@ -8,6 +8,14 @@ pool:
   name: Default
 
 steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  displayName: 'ARM Template deployment: Resource Group scope'
+  inputs:
+    ConnectedServiceName: Rmd
+    subscriptionName: 'c00d16c7-6c1f-4c03-9be1-6934a4c49682'
+    resourceGroupName: kuvrg1df
+    location: 'East US'
+    csmFile: 'resource-group-template.json'
 
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
