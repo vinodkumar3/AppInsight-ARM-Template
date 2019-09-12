@@ -12,6 +12,7 @@ steps:
   inputs:
     deploymentScope: 'Management Group'
     ConnectedServiceName: 'MGScope-KuvMG1'
+    Location: 'Central US'
     templateLocation: 'Linked artifact'
     csmFile: 'mg-template.json'
     deploymentMode: 'Incremental'
