@@ -8,14 +8,11 @@ pool:
   name: Default
 
 steps:
-
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
-    deploymentScope: 'Subscription'
-    ConnectedServiceName: 'Rmd'
-    subscriptionName: 'c00d16c7-6c1f-4c03-9be1-6934a4c49682'
-    location: 'Central India'
-    templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/vinodkumar3/rgCreate/master/rgCreateTemplate'
+    deploymentScope: 'Management Group'
+    ConnectedServiceName: 'MGScope-KuvMG1'
+    location: 'East US'
+    templateLocation: 'Linked artifact'
+    csmFile: 'mg-template.json'
     deploymentMode: 'Incremental'
-    deploymentName: 'bbbbbbb'
