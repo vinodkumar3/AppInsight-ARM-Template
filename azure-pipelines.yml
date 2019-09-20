@@ -5,7 +5,7 @@
 trigger:
 - master
 pool:
-  name: Azure Pipelines
+  name: 'Azure Pipelines'
 
 steps:
 - task: AzureResourceManagerTemplateDeployment@3
