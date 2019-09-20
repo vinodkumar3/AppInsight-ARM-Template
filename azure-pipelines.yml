@@ -11,28 +11,8 @@ steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Management Group'
-    ConnectedServiceName: 'MGScope-KuvMG1'
-    Location: 'Central US'
+    ConnectedServiceName: 'ManagementGroup - KuvMG1'
+    location: 'Central US'
     templateLocation: 'Linked artifact'
-    csmFile: 'mg-template.json'
-    deploymentMode: 'Incremental'
-
-- task: AzureResourceManagerTemplateDeployment@3
-  inputs:
-    deploymentScope: 'Subscription'
-    ConnectedServiceName: 'SubscriptionScope-RMDev'
-    subscriptionName: 'c00d16c7-6c1f-4c03-9be1-6934a4c49682'
-    location: 'Australia Southeast'
-    templateLocation: 'Linked artifact'
-    csmFile: 'subscription-template.json'
-    deploymentMode: 'Incremental'
-
-- task: AzureResourceManagerTemplateDeployment@3
-  inputs:
-    ConnectedServiceName: 'RGScope-kuvrg'
-    subscriptionName: 'c00d16c7-6c1f-4c03-9be1-6934a4c49682'
-    resourceGroupName: 'kuvrg90'
-    location: 'East US'
-    templateLocation: 'Linked artifact'
-    csmFile: 'resource-group-template.json'
+    csmFile: 'mg.json'
     deploymentMode: 'Incremental'
