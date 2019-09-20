@@ -14,5 +14,5 @@ steps:
     ConnectedServiceName: 'ManagementGroup - KuvMG1'
     location: 'Central US'
     templateLocation: 'Linked artifact'
-    csmFile: 'mg.json'
+    csmFile: mg.json
     deploymentMode: 'Incremental'
