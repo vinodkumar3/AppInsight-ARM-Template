@@ -2,8 +2,10 @@
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
+
 trigger:
 - master
+
 pool:
   vmImage: 'vs2017-win2016'
 
@@ -12,7 +14,31 @@ steps:
   inputs:
     deploymentScope: 'Management Group'
     ConnectedServiceName: 'ManagementGroup - KuvMG1'
+    location: 'Central India'
+    templateLocation: 'Linked artifact'
+    csmFile: 'mg.json'
+    deploymentMode: 'Incremental'
+
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Subscription'
+    ConnectedServiceName: 'RMDev (c00d16c7-6c1f-4c03-9be1-6934a4c49682)'
+    subscriptionName: 'c00d16c7-6c1f-4c03-9be1-6934a4c49682'
     location: 'Central US'
     templateLocation: 'Linked artifact'
-    csmFile: mg.json
+    csmFile: 'subscription.json'
     deploymentMode: 'Incremental'
+
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    ConnectedServiceName: 'Test - RG scope'
+    subscriptionName: 'c00d16c7-6c1f-4c03-9be1-6934a4c49682'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'kuvrg'
+    location: 'Central US'
+    templateLocation: 'Linked artifact'
+    csmFile: 'rg.json'
+    deploymentMode: 'Incremental'
+
+    
